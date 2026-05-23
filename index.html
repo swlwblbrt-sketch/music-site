@@ -6,7 +6,6 @@
 <title>Albert Shaulov</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -18,11 +17,9 @@ body{
 background:
 linear-gradient(rgba(255,245,225,0.82),rgba(255,245,225,0.82)),
 url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1600&q=80');
-
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-
 text-align:center;
 color:#111;
 padding:30px 15px;
@@ -151,7 +148,6 @@ max-width:220px;
 }
 
 @media(max-width:768px){
-
 h1{font-size:42px;}
 .subtitle{font-size:20px;}
 .btn{font-size:24px;padding:18px;}
@@ -160,9 +156,7 @@ h1{font-size:42px;}
 .info-text{font-size:20px;}
 .song-title{font-size:24px;}
 iframe{height:220px;}
-
 }
-
 </style>
 </head>
 
@@ -174,96 +168,51 @@ iframe{height:220px;}
 Официальный музыкальный сайт
 </div>
 
-<a class="btn"
-href="https://youtube.com/@Betto235"
-target="_blank">
-
+<a class="btn" href="https://youtube.com/@Betto235" target="_blank">
 🎵 Мой YouTube канал
-
 </a>
 
 <button class="btn" onclick="openSongs()">
-
 🎼 Все мои песни
-
 </button>
 
 <button class="btn" onclick="openOrder()">
-
 🎤 Заказать песню
-
 </button>
 
 <button class="btn" onclick="openRequest()">
-
 📩 Оставить заявку
-
 </button>
 
-<a class="btn"
-href="https://wa.me/972506862512"
-target="_blank">
-
+<a class="btn" href="https://wa.me/972506862512" target="_blank">
 📞 Связаться со мной
-
 </a>
 
 <button class="btn" onclick="openAbout()">
-
 👤 Обо мне
-
 </button>
 
 <div class="lang-buttons">
-
-<button class="btn lang-btn" onclick="setLanguage('ru')">
-🇷🇺 Русский
-</button>
-
-<button class="btn lang-btn" onclick="setLanguage('he')">
-🇮🇱 עברית
-</button>
-
-<button class="btn lang-btn" onclick="setLanguage('en')">
-🇬🇧 English
-</button>
-
+<button class="btn lang-btn" onclick="setLanguage('ru')">🇷🇺 Русский</button>
+<button class="btn lang-btn" onclick="setLanguage('he')">🇮🇱 עברית</button>
+<button class="btn lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
 </div>
 
 <div class="poem-box">
-
 Порою жизнь — как клавиши рояля,<br><br>
-
 Где белый свет сменяет темнота.<br><br>
-
 Судьба играет нами, словно ветром,<br><br>
-
 То вверх несёт, то резко бьёт волна.<br><br>
-
 Когда молчит весь мир вокруг меня,<br><br>
-
 Я говорю с мелодией своей.<br><br>
-
 Ведь музыка рождается из сердца,<br><br>
-
 И делает сердца людей теплей.
-
 </div>
 
 <div class="info-box">
-
-<div class="info-title">
-📞 Контакты
-</div>
-
-<div class="info-text">
-Альберт Шаулов
-</div>
-
-<div class="info-text">
-Телефон / WhatsApp: 050-686-2512
-</div>
-
+<div class="info-title">📞 Контакты</div>
+<div class="info-text">Альберт Шаулов</div>
+<div class="info-text">Телефон / WhatsApp: 050-686-2512</div>
 </div>
 
 <div class="footer">
@@ -271,54 +220,40 @@ target="_blank">
 </div>
 
 <div id="songsModal" class="modal">
-
 <div class="modal-content">
-
 <span class="close" onclick="closeSongs()">&times;</span>
 
-<div class="info-title">
-🎼 Все мои песни
-</div>
+<div class="info-title">🎼 Все мои песни</div>
 
-<div class="song-card">
-<div class="song-title">🎵 Песня 1</div>
-<iframe src="https://www.youtube.com/embed/iG-y-FSbo40"></iframe>
-</div>
-
-<div class="song-card">
-<div class="song-title">🎵 Песня 2</div>
-<iframe src="https://www.youtube.com/embed/bPf9NeaRRoY"></iframe>
-</div>
-
-<div class="song-card">
-<div class="song-title">🎵 Песня 3</div>
-<iframe src="https://www.youtube.com/embed/86d9m6_biCA"></iframe>
-</div>
-
-<div class="song-card">
-<div class="song-title">🎵 Песня 4</div>
-<iframe src="https://www.youtube.com/embed/oPcs-v0R4f4"></iframe>
-</div>
-
-<div class="song-card">
-<div class="song-title">🎵 Песня 5</div>
-<iframe src="https://www.youtube.com/embed/w_SgysKNpzk"></iframe>
-</div>
+<div class="song-card"><div class="song-title">🎵 Песня 1</div><iframe src="https://www.youtube.com/embed/iG-y-FSbo40"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 2</div><iframe src="https://www.youtube.com/embed/bPf9NeaRRoY"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 3</div><iframe src="https://www.youtube.com/embed/86d9m6_biCA"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 4</div><iframe src="https://www.youtube.com/embed/oPcs-v0R4f4"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 5</div><iframe src="https://www.youtube.com/embed/w_SgysKNpzk"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 6</div><iframe src="https://www.youtube.com/embed/g2ZIViUVs9g"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 7</div><iframe src="https://www.youtube.com/embed/EQGvBU_xKJM"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 8</div><iframe src="https://www.youtube.com/embed/MAiqZQwjJ6o"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 9</div><iframe src="https://www.youtube.com/embed/Uyp-1R0qSmQ"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 10</div><iframe src="https://www.youtube.com/embed/LkKHbJuSJzo"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 11</div><iframe src="https://www.youtube.com/embed/Ufhe01Bka1c"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 12</div><iframe src="https://www.youtube.com/embed/SwU3Zu5E-14"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 13</div><iframe src="https://www.youtube.com/embed/doJhamzLBw4"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 14</div><iframe src="https://www.youtube.com/embed/LSjYwcDE1j8"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 15</div><iframe src="https://www.youtube.com/embed/DPyCW-E0CXc"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 16</div><iframe src="https://www.youtube.com/embed/L6zb6SU-QM4"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 17</div><iframe src="https://www.youtube.com/embed/KCXy2rCw050"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 18</div><iframe src="https://www.youtube.com/embed/-7ka8Z36TIo"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 19</div><iframe src="https://www.youtube.com/embed/j3732DF_4oM"></iframe></div>
+<div class="song-card"><div class="song-title">🎵 Песня 20</div><iframe src="https://www.youtube.com/embed/gg2YsGrt_48"></iframe></div>
 
 </div>
-
 </div>
 
 <div id="orderModal" class="modal">
-
 <div class="modal-content">
-
 <span class="close" onclick="closeOrder()">&times;</span>
 
-<div class="info-title">
-🎤 Заказать песню
-</div>
-
+<div class="info-title">🎤 Заказать песню</div>
 <div class="info-text">✅ Песня на заказ</div>
 <div class="info-text">✅ Слова и музыка</div>
 <div class="info-text">✅ Поздравления</div>
@@ -328,96 +263,46 @@ target="_blank">
 <div class="info-text">✅ Песни о любви</div>
 <div class="info-text">✅ Душевные и хитовые песни</div>
 
-<a class="btn"
-href="https://wa.me/972506862512"
-target="_blank">
-
+<a class="btn" href="https://wa.me/972506862512" target="_blank">
 📞 Написать в WhatsApp
-
 </a>
 
 </div>
-
 </div>
 
 <div id="requestModal" class="modal">
-
 <div class="modal-content">
-
 <span class="close" onclick="closeRequest()">&times;</span>
 
-<div class="info-title">
-📩 Оставить заявку
-</div>
+<div class="info-title">📩 Оставить заявку</div>
+<div class="info-text">Напишите:</div>
+<div class="info-text">— Какую песню вы хотите</div>
+<div class="info-text">— Для кого песня</div>
+<div class="info-text">— Какой стиль нужен</div>
+<div class="info-text">— Какие эмоции и пожелания</div>
 
-<div class="info-text">
-Напишите:
-</div>
-
-<div class="info-text">
-— Какую песню вы хотите
-</div>
-
-<div class="info-text">
-— Для кого песня
-</div>
-
-<div class="info-text">
-— Какой стиль нужен
-</div>
-
-<div class="info-text">
-— Какие эмоции и пожелания
-</div>
-
-<a class="btn"
-href="https://wa.me/972506862512"
-target="_blank">
-
+<a class="btn" href="https://wa.me/972506862512" target="_blank">
 📞 Отправить заявку
-
 </a>
 
 </div>
-
 </div>
 
 <div id="aboutModal" class="modal">
-
 <div class="modal-content">
-
 <span class="close" onclick="closeAbout()">&times;</span>
 
-<div class="info-title">
-👤 Обо мне
-</div>
-
-<div class="info-text">
-Меня зовут Альберт Шаулов.
-</div>
-
-<div class="info-text">
-Я с 13 лет пишу песни, музыку и слова.
-</div>
-
-<div class="info-text">
-Сам пою, играю на пианино и на гитаре.
-</div>
-
-<div class="info-text">
-Продал несколько своих песен.
-</div>
-
-<div class="info-text">
-Музыкой занимаюсь от души и на высоком уровне.
-</div>
+<div class="info-title">👤 Обо мне</div>
+<div class="info-text">Меня зовут Альберт Шаулов.</div>
+<div class="info-text">Я с 13 лет пишу песни, музыку и слова.</div>
+<div class="info-text">Сам пою, играю на пианино и на гитаре.</div>
+<div class="info-text">Продал несколько своих песен.</div>
+<div class="info-text">Музыкой занимаюсь от души и на высоком уровне.</div>
 
 </div>
-
 </div>
 
 <script>
-
 function openSongs(){
 document.getElementById("songsModal").style.display="block";
 }
@@ -451,7 +336,6 @@ document.getElementById("aboutModal").style.display="none";
 }
 
 function setLanguage(lang){
-
 if(lang==='ru'){
 alert('Русский язык включен');
 }
@@ -463,9 +347,7 @@ alert('השפה העברית הופעלה');
 if(lang==='en'){
 alert('English language enabled');
 }
-
 }
-
 </script>
 
 </body>
