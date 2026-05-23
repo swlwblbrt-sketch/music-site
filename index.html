@@ -18,67 +18,33 @@ color:#111;
 min-height:100vh;
 padding:45px 15px;
 background:
-linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.65)),
+linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.70)),
 url('https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
 color:white;
 position:relative;
 overflow:hidden;
-box-shadow:0 15px 40px rgba(0,0,0,0.45);
 }
 
-.hero:before{
-content:"";
-position:absolute;
-width:280px;
-height:280px;
-background:rgba(255,255,255,0.18);
-filter:blur(50px);
-border-radius:50%;
-top:40px;
-left:-70px;
-animation:smoke 7s infinite alternate;
-}
-
-.hero:after{
-content:"";
-position:absolute;
-width:320px;
-height:320px;
-background:rgba(255,215,0,0.25);
-filter:blur(60px);
-border-radius:50%;
-bottom:30px;
-right:-80px;
-animation:smoke 8s infinite alternate-reverse;
-}
-
-@keyframes smoke{
-from{transform:translateY(0) scale(1);}
-to{transform:translateY(55px) scale(1.25);}
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-}
+.hero-content{position:relative;z-index:2;}
 
 .artist-photo{
 width:260px;
 height:260px;
 border-radius:50%;
 object-fit:cover;
-border:6px solid gold;
-box-shadow:0 0 40px gold;
+object-position:center;
+border:7px solid gold;
+box-shadow:0 0 45px gold;
 margin:20px auto;
 display:block;
+background:white;
 }
 
 h1{
 font-size:58px;
 margin-top:20px;
-font-weight:bold;
 text-shadow:0 0 18px gold;
 }
 
@@ -117,7 +83,6 @@ box-shadow:0 10px 30px rgba(0,0,0,0.2);
 .poem-box{
 line-height:1.9;
 font-size:24px;
-font-weight:500;
 }
 
 .info-title{
@@ -133,7 +98,7 @@ margin:15px 0;
 }
 
 .song-card{
-background:rgba(255,255,255,0.95);
+background:white;
 border-radius:25px;
 padding:20px;
 margin:25px auto;
@@ -155,12 +120,6 @@ border:none;
 border-radius:18px;
 }
 
-.footer{
-margin-top:60px;
-font-size:20px;
-padding-bottom:40px;
-}
-
 .modal{
 display:none;
 position:fixed;
@@ -180,7 +139,6 @@ border-radius:30px;
 padding:30px;
 max-width:750px;
 margin:60px auto;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 .close{
@@ -190,17 +148,20 @@ float:right;
 cursor:pointer;
 }
 
-.lang-btn{max-width:220px;}
+.footer{
+margin-top:60px;
+font-size:20px;
+padding-bottom:40px;
+}
 
 @media(max-width:768px){
 h1{font-size:42px;}
 .subtitle{font-size:20px;}
 .artist-photo{width:210px;height:210px;}
 .btn{font-size:23px;padding:18px;}
-.poem-box{font-size:19px;padding:25px;}
+.poem-box{font-size:19px;}
 .info-title{font-size:28px;}
 .info-text{font-size:20px;}
-.song-title{font-size:24px;}
 iframe{height:220px;}
 }
 </style>
@@ -211,7 +172,7 @@ iframe{height:220px;}
 <div class="hero">
 <div class="hero-content">
 
-<img class="artist-photo" src="1000627747.jpg">
+<img class="artist-photo" src="1000627749.jpg" alt="Albert Shaulov">
 
 <h1>Albert Shaulov</h1>
 
@@ -220,28 +181,14 @@ iframe{height:220px;}
 </div>
 
 <a class="btn" href="https://youtube.com/@Betto235" target="_blank">🎵 Мой YouTube канал</a>
-
 <button class="btn" onclick="openSongs()">🎼 Все мои песни</button>
 <button class="btn" onclick="openOrder()">🎤 Заказать песню</button>
 <button class="btn" onclick="openRequest()">📩 Оставить заявку</button>
 <button class="btn" onclick="openPay()">💳 Оплатить заказ</button>
-
 <a class="btn" href="https://wa.me/972506862512" target="_blank">📞 Связаться со мной</a>
-
 <button class="btn" onclick="openAbout()">👤 Обо мне</button>
-<button class="btn" onclick="playMusic()">🎹 Включить музыку</button>
 
 </div>
-</div>
-
-<audio id="bgMusic" loop>
-<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=soft-piano-100-bpm-121529.mp3" type="audio/mpeg">
-</audio>
-
-<div>
-<button class="btn lang-btn" onclick="setLanguage('ru')">🇷🇺 Русский</button>
-<button class="btn lang-btn" onclick="setLanguage('he')">🇮🇱 עברית</button>
-<button class="btn lang-btn" onclick="setLanguage('en')">🇬🇧 English</button>
 </div>
 
 <div class="poem-box">
@@ -261,14 +208,11 @@ iframe{height:220px;}
 <div class="info-text">Телефон / WhatsApp: 050-686-2512</div>
 </div>
 
-<div class="footer">
-© Albert Shaulov — Все права защищены
-</div>
+<div class="footer">© Albert Shaulov — Все права защищены</div>
 
 <div id="songsModal" class="modal">
 <div class="modal-content">
 <span class="close" onclick="closeSongs()">&times;</span>
-
 <div class="info-title">🎼 Все мои песни</div>
 
 <div class="song-card"><div class="song-title">🎵 Песня 1</div><iframe src="https://www.youtube.com/embed/iG-y-FSbo40"></iframe></div>
@@ -306,7 +250,6 @@ iframe{height:220px;}
 <div class="info-text">✅ Шансон</div>
 <div class="info-text">✅ Песни для свадьбы</div>
 <div class="info-text">✅ Песни о любви</div>
-<div class="info-text">✅ Душевные и хитовые песни</div>
 <a class="btn" href="https://wa.me/972506862512" target="_blank">📞 Написать в WhatsApp</a>
 </div>
 </div>
@@ -358,16 +301,6 @@ function openPay(){document.getElementById("payModal").style.display="block";}
 function closePay(){document.getElementById("payModal").style.display="none";}
 function openAbout(){document.getElementById("aboutModal").style.display="block";}
 function closeAbout(){document.getElementById("aboutModal").style.display="none";}
-
-function playMusic(){
-document.getElementById("bgMusic").play();
-}
-
-function setLanguage(lang){
-if(lang==='ru'){alert('Русский язык включен');}
-if(lang==='he'){alert('השפה העברית הופעלה');}
-if(lang==='en'){alert('English language enabled');}
-}
 </script>
 
 </body>
