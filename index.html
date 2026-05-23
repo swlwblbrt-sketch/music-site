@@ -1,398 +1,99 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Albert Shaulov</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:
-linear-gradient(rgba(255,245,225,0.82),rgba(255,245,225,0.82)),
-url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1600&q=80');
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-
-text-align:center;
-color:#111;
-
-padding:30px 15px;
-}
-
-h1{
-font-size:58px;
-margin-top:40px;
-font-weight:bold;
-}
-
-.subtitle{
-font-size:24px;
-margin:15px 0 40px;
-}
-
-.btn{
-display:block;
-width:85%;
-max-width:420px;
-margin:20px auto;
-padding:22px;
-border-radius:50px;
-background:#ffd500;
-color:#111;
-text-decoration:none;
-font-size:30px;
-font-weight:bold;
-box-shadow:0 8px 20px rgba(0,0,0,0.25);
-border:none;
-cursor:pointer;
-}
-
-.poem-box{
-background:rgba(255,255,255,0.86);
-border-radius:30px;
-padding:35px;
-margin:40px auto;
-width:95%;
-max-width:800px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-line-height:1.9;
-font-size:26px;
-font-weight:500;
-}
-
-.section-title{
-margin-top:80px;
-margin-bottom:30px;
-font-size:42px;
-font-weight:bold;
-}
-
-.song-card,.info-box{
-background:rgba(255,255,255,0.86);
-border-radius:30px;
-padding:25px;
-margin:30px auto;
-width:95%;
-max-width:700px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-.song-title,.info-title{
-font-size:34px;
-font-weight:bold;
-margin-bottom:20px;
-}
-
-.info-text{
-font-size:24px;
-line-height:1.5;
-margin:15px 0;
-}
-
-iframe{
-width:100%;
-height:350px;
-border:none;
-border-radius:20px;
-}
-
-.footer{
-margin-top:80px;
-font-size:20px;
-padding-bottom:40px;
-}
-
-.modal{
-display:none;
-position:fixed;
-z-index:999;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.7);
-padding:40px 15px;
-overflow:auto;
-}
-
-.modal-content{
-background:white;
-border-radius:30px;
-padding:30px;
-max-width:700px;
-margin:60px auto;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
-
-.close{
-font-size:40px;
-font-weight:bold;
-float:right;
-cursor:pointer;
-}
-
-@media(max-width:768px){
-
-h1{
-font-size:42px;
-}
-
-.subtitle{
-font-size:20px;
-}
-
-.btn{
-font-size:24px;
-padding:18px;
-}
-
-.poem-box{
-font-size:20px;
-padding:25px;
-}
-
-.section-title{
-font-size:32px;
-}
-
-.song-title,.info-title{
-font-size:28px;
-}
-
-.info-text{
-font-size:20px;
-}
-
-iframe{
-height:220px;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<h1>Albert Shaulov</h1>
-
-<div class="subtitle">
-Официальный музыкальный сайт
-</div>
-
-<a class="btn"
-href="https://youtube.com/@Betto235"
-target="_blank">
-
-🎵 Мои песни на YouTube
-
-</a>
-
-<a class="btn"
-href="https://wa.me/972506862512"
-target="_blank">
-
-📞 Связаться со мной
-
-</a>
-
-<button class="btn" onclick="openAbout()">
-
-👤 Обо мне
-
-</button>
-
-<div class="poem-box">
-
-Порою жизнь — как клавиши рояля,<br><br>
-
-Где белый свет сменяет темнота.<br><br>
-
-Судьба играет нами, словно ветром,<br><br>
-
-То вверх несёт, то резко бьёт волна.<br><br>
-
-Когда молчит весь мир вокруг меня,<br><br>
-
-Я говорю с мелодией своей.<br><br>
-
-Ведь музыка рождается из сердца,<br><br>
-
-И делает сердца людей теплей.<br><br>
-
-Не деньги делают богатым человека,<br><br>
-
-Не золото и блеск красивых фраз.<br><br>
-
-А тот огонь, что музыка зажгла однажды,<br><br>
-
-Навеки остаётся внутри нас.<br><br>
-
-Жизнь — это ноты между тишиною,<br><br>
-
-Где каждая мелодия живая.<br><br>
-
-И если в сердце музыка живёт,<br><br>
-
-Душа уже навеки не пустая.<br><br>
-
-Для меня музыка — не просто звуки,<br><br>
-
-А мир, где чувства превращаются в мечту.<br><br>
-
-Пока звучит мелодия в душе моей,<br><br>
-
-Я верю в свет, любовь и доброту.
-
-</div>
-
-<div class="section-title">
-
-🎼 Все мои песни
-
+<div class="song-card">
+<div class="song-title">🎵 Песня 1</div>
+<iframe src="https://www.youtube.com/embed/iG-y-FSbo40"></iframe>
 </div>
 
 <div class="song-card">
-
-<div class="song-title">
-
-Песня 1
-
-</div>
-
-<iframe
-src="https://www.youtube.com/embed/jQcYWHrkbjk">
-</iframe>
-
+<div class="song-title">🎵 Песня 2</div>
+<iframe src="https://www.youtube.com/embed/bPf9NeaRRoY"></iframe>
 </div>
 
 <div class="song-card">
-
-<div class="song-title">
-
-Песня 2
-
-</div>
-
-<iframe
-src="https://www.youtube.com/embed/i4W7i7IOMMA">
-</iframe>
-
+<div class="song-title">🎵 Песня 3</div>
+<iframe src="https://www.youtube.com/embed/86d9m6_biCA"></iframe>
 </div>
 
 <div class="song-card">
-
-<div class="song-title">
-
-Песня 3
-
-</div>
-
-<iframe
-src="https://www.youtube.com/embed/R4-M8EFx7t4">
-</iframe>
-
+<div class="song-title">🎵 Песня 4</div>
+<iframe src="https://www.youtube.com/embed/oPcs-v0R4f4"></iframe>
 </div>
 
 <div class="song-card">
-
-<div class="song-title">
-
-Песня 4
-
+<div class="song-title">🎵 Песня 5</div>
+<iframe src="https://www.youtube.com/embed/w_SgysKNpzk"></iframe>
 </div>
 
-<iframe
-src="https://www.youtube.com/embed/sxMxtXUxMwc">
-</iframe>
-
+<div class="song-card">
+<div class="song-title">🎵 Песня 6</div>
+<iframe src="https://www.youtube.com/embed/g2ZIViUVs9g"></iframe>
 </div>
 
-<div class="info-box">
-
-<div class="info-title">
-
-📞 Контакты
-
+<div class="song-card">
+<div class="song-title">🎵 Песня 7</div>
+<iframe src="https://www.youtube.com/embed/EQGvBU_xKJM"></iframe>
 </div>
 
-<div class="info-text">
-Альберт Шаулов
+<div class="song-card">
+<div class="song-title">🎵 Песня 8</div>
+<iframe src="https://www.youtube.com/embed/MAiqZQwjJ6o"></iframe>
 </div>
 
-<div class="info-text">
-Телефон / WhatsApp: 050-686-2512
+<div class="song-card">
+<div class="song-title">🎵 Песня 9</div>
+<iframe src="https://www.youtube.com/embed/Uyp-1R0qSmQ"></iframe>
 </div>
 
+<div class="song-card">
+<div class="song-title">🎵 Песня 10</div>
+<iframe src="https://www.youtube.com/embed/LkKHbJuSJzo"></iframe>
 </div>
 
-<div class="footer">
-
-© Albert Shaulov — Все права защищены
-
+<div class="song-card">
+<div class="song-title">🎵 Песня 11</div>
+<iframe src="https://www.youtube.com/embed/Ufhe01Bka1c"></iframe>
 </div>
 
-<div id="aboutModal" class="modal">
-
-<div class="modal-content">
-
-<span class="close" onclick="closeAbout()">&times;</span>
-
-<div class="info-title">
-
-👤 Обо мне
-
+<div class="song-card">
+<div class="song-title">🎵 Песня 12</div>
+<iframe src="https://www.youtube.com/embed/SwU3Zu5E-14"></iframe>
 </div>
 
-<div class="info-text">
-Меня зовут Альберт Шаулов.
+<div class="song-card">
+<div class="song-title">🎵 Песня 13</div>
+<iframe src="https://www.youtube.com/embed/doJhamzLBw4"></iframe>
 </div>
 
-<div class="info-text">
-Я с 13 лет пишу песни, музыку и слова.
+<div class="song-card">
+<div class="song-title">🎵 Песня 14</div>
+<iframe src="https://www.youtube.com/embed/LSjYwcDE1j8"></iframe>
 </div>
 
-<div class="info-text">
-Сам пою, играю на пианино и на гитаре.
+<div class="song-card">
+<div class="song-title">🎵 Песня 15</div>
+<iframe src="https://www.youtube.com/embed/DPyCW-E0CXc"></iframe>
 </div>
 
-<div class="info-text">
-Продал несколько своих песен.
+<div class="song-card">
+<div class="song-title">🎵 Песня 16</div>
+<iframe src="https://www.youtube.com/embed/L6zb6SU-QM4"></iframe>
 </div>
 
-<div class="info-text">
-Музыкой занимаюсь от души, серьёзно и на высоком уровне.
+<div class="song-card">
+<div class="song-title">🎵 Песня 17</div>
+<iframe src="https://www.youtube.com/embed/KCXy2rCw050"></iframe>
 </div>
 
-<div class="info-text">
-Для меня музыка — это жизнь, чувства, душа и вдохновение.
+<div class="song-card">
+<div class="song-title">🎵 Песня 18</div>
+<iframe src="https://www.youtube.com/embed/-7ka8Z36TIo"></iframe>
 </div>
 
+<div class="song-card">
+<div class="song-title">🎵 Песня 19</div>
+<iframe src="https://www.youtube.com/embed/j3732DF_4oM"></iframe>
 </div>
 
+<div class="song-card">
+<div class="song-title">🎵 Песня 20</div>
+<iframe src="https://www.youtube.com/embed/gg2YsGrt_48"></iframe>
 </div>
-
-<script>
-
-function openAbout(){
-document.getElementById("aboutModal").style.display="block";
-}
-
-function closeAbout(){
-document.getElementById("aboutModal").style.display="none";
-}
-
-</script>
-
-</body>
-</html>
