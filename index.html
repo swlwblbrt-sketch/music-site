@@ -20,7 +20,7 @@ color:white;
 text-align:center;
 }
 
-/* ГЛАВНЫЙ ЭКРАН */
+/* ФОН */
 
 .hero{
 min-height:100vh;
@@ -36,24 +36,24 @@ background-position:center;
 
 h1{
 font-size:58px;
-margin-top:40px;
+margin-top:50px;
 text-shadow:0 0 25px gold;
 }
 
 .subtitle{
-font-size:28px;
-margin-top:15px;
-line-height:1.5;
-color:#f1f1f1;
+font-size:27px;
+margin-top:20px;
+line-height:1.6;
+color:#f5f5f5;
 }
 
 /* КНОПКИ */
 
 .menu{
-margin-top:50px;
+margin-top:60px;
 display:flex;
 flex-direction:column;
-gap:28px;
+gap:25px;
 align-items:center;
 }
 
@@ -68,7 +68,7 @@ font-weight:bold;
 cursor:pointer;
 background:linear-gradient(45deg,#ffd700,#fff07a);
 color:black;
-box-shadow:0 0 30px rgba(255,215,0,0.7);
+box-shadow:0 0 25px rgba(255,215,0,0.7);
 transition:0.3s;
 }
 
@@ -91,15 +91,15 @@ top:0;
 width:100%;
 height:100%;
 overflow:auto;
-background:rgba(0,0,0,0.9);
-padding:25px 10px;
+background:rgba(0,0,0,0.92);
+padding:20px 10px;
 }
 
 .modal-content{
-background:#1b1b1b;
+background:#1e1e1e;
 margin:auto;
 padding:25px;
-border-radius:25px;
+border-radius:30px;
 width:95%;
 max-width:900px;
 color:white;
@@ -110,7 +110,7 @@ position:relative;
 position:absolute;
 right:20px;
 top:10px;
-font-size:40px;
+font-size:42px;
 cursor:pointer;
 color:white;
 }
@@ -119,7 +119,7 @@ color:white;
 
 .song-card{
 margin-top:25px;
-background:#222;
+background:#2a2a2a;
 padding:15px;
 border-radius:20px;
 }
@@ -133,22 +133,22 @@ color:gold;
 iframe{
 width:100%;
 height:220px;
-border-radius:15px;
 border:none;
+border-radius:15px;
 }
 
 /* ТЕКСТ */
 
 .info-title{
-font-size:35px;
-margin-bottom:20px;
+font-size:38px;
+margin-bottom:25px;
 color:gold;
 }
 
 .info-text{
-font-size:24px;
-margin:15px 0;
+font-size:25px;
 line-height:1.7;
+margin-top:15px;
 }
 
 </style>
@@ -161,13 +161,15 @@ line-height:1.7;
 <h1>Albert Shaulov</h1>
 
 <div class="subtitle">
-🎸 Автор песен • Пианино • Гитара • Музыка от души
+🎸 Автор песен • Гитара • Пианино • Музыка от души
 </div>
 
 <div class="menu">
 
 <a href="https://www.youtube.com/@Betto235" target="_blank">
-<button class="btn">🎵 Мой YouTube канал</button>
+<button class="btn">
+🎵 Мой YouTube канал
+</button>
 </a>
 
 <button class="btn" onclick="openSongs()">
@@ -183,7 +185,9 @@ line-height:1.7;
 </button>
 
 <a href="https://wa.me/972506862512" target="_blank">
-<button class="btn">📞 Связаться со мной</button>
+<button class="btn">
+📞 Связаться со мной
+</button>
 </a>
 
 </div>
@@ -197,7 +201,9 @@ line-height:1.7;
 
 <span class="close" onclick="closeSongs()">&times;</span>
 
-<div class="info-title">🎵 Все мои песни</div>
+<div class="info-title">
+🎵 Все мои песни
+</div>
 
 <div class="song-card">
 <div class="song-title">🎵 Песня 1</div>
@@ -229,19 +235,23 @@ line-height:1.7;
 
 <span class="close" onclick="closeOrder()">&times;</span>
 
-<div class="info-title">🎤 Заказать песню</div>
+<div class="info-title">
+🎤 Заказать песню
+</div>
 
 <div class="info-text">✅ Песни на заказ</div>
-<div class="info-text">✅ Татарский и русский шансон</div>
+<div class="info-text">✅ Кавказский и русский шансон</div>
 <div class="info-text">✅ Душевные и лирические песни</div>
 <div class="info-text">✅ Песни о любви</div>
 <div class="info-text">✅ Свадебные песни</div>
 <div class="info-text">✅ Поздравления</div>
 
-<br>
+<br><br>
 
 <a href="https://wa.me/972506862512" target="_blank">
-<button class="btn">📲 Написать в WhatsApp</button>
+<button class="btn">
+📲 Написать в WhatsApp
+</button>
 </a>
 
 </div>
@@ -254,7 +264,9 @@ line-height:1.7;
 
 <span class="close" onclick="closeAbout()">&times;</span>
 
-<div class="info-title">👤 Обо мне</div>
+<div class="info-title">
+👤 Обо мне
+</div>
 
 <div class="info-text">
 
@@ -262,7 +274,7 @@ line-height:1.7;
 
 Я пишу песни, музыку и тексты.<br><br>
 
-Работаю в стиле татарского и русского шансона.<br><br>
+Работаю в стиле кавказского и русского шансона.<br><br>
 
 Пишу душевные, лирические песни и песни о любви.<br><br>
 
