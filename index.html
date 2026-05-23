@@ -15,103 +15,63 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:
-linear-gradient(rgba(255,245,225,0.82),rgba(255,245,225,0.82)),
-url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1600&q=80');
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-
+background:#111;
+color:white;
 text-align:center;
-color:#111;
-padding:30px 15px;
+overflow-x:hidden;
 }
 
+/* ФОН */
+
+.hero{
+min-height:100vh;
+padding:40px 20px;
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.75)),
+url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200');
+background-size:cover;
+background-position:center;
+}
+
+/* ТЕКСТ */
+
 h1{
-font-size:58px;
+font-size:52px;
 margin-top:40px;
-font-weight:bold;
+text-shadow:0 0 20px gold;
 }
 
 .subtitle{
 font-size:24px;
-margin:15px 0 40px;
+margin-top:20px;
+line-height:1.6;
+color:#f1f1f1;
+text-shadow:0 0 10px black;
 }
+
+/* КНОПКИ */
 
 .btn{
 display:block;
 width:85%;
 max-width:420px;
-margin:20px auto;
-padding:22px;
-border-radius:50px;
-background:#ffd500;
-color:#111;
-text-decoration:none;
-font-size:30px;
-font-weight:bold;
-box-shadow:0 8px 20px rgba(0,0,0,0.25);
-border:none;
-cursor:pointer;
-}
-
-.poem-box,.info-box{
-background:rgba(255,255,255,0.86);
-border-radius:30px;
-padding:30px;
-margin:35px auto;
-width:95%;
-max-width:800px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-.poem-box{
-line-height:1.9;
-font-size:25px;
-font-weight:500;
-}
-
-.info-title{
-font-size:34px;
-font-weight:bold;
-margin-bottom:20px;
-}
-
-.info-text{
-font-size:24px;
-line-height:1.5;
-margin:15px 0;
-}
-
-.song-card{
-background:rgba(255,255,255,0.92);
-border-radius:25px;
+margin:28px auto;
 padding:20px;
-margin:25px auto;
-width:95%;
-max-width:700px;
-box-shadow:0 8px 25px rgba(0,0,0,0.2);
-}
-
-.song-title{
-font-size:28px;
+background:linear-gradient(45deg,#ffe100,#fff27a);
+border-radius:30px;
+text-decoration:none;
+font-size:26px;
 font-weight:bold;
-margin-bottom:15px;
+color:black;
+box-shadow:0 0 25px rgba(255,215,0,0.7);
+transition:0.3s;
 }
 
-iframe{
-width:100%;
-height:320px;
-border:none;
-border-radius:18px;
+.btn:hover{
+transform:scale(1.04);
 }
 
-.footer{
-margin-top:80px;
-font-size:20px;
-padding-bottom:40px;
-}
+/* МОДАЛЬНОЕ ОКНО */
 
 .modal{
 display:none;
@@ -121,46 +81,55 @@ left:0;
 top:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.7);
-padding:40px 15px;
-overflow:auto;
+background:rgba(0,0,0,0.75);
+padding:20px;
 }
 
 .modal-content{
 background:white;
-border-radius:30px;
+color:black;
+margin:10% auto;
 padding:30px;
-max-width:750px;
-margin:60px auto;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+border-radius:30px;
+max-width:500px;
+text-align:center;
+animation:show 0.3s;
+}
+
+@keyframes show{
+from{
+transform:scale(0.8);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
 }
 
 .close{
-font-size:40px;
-font-weight:bold;
 float:right;
+font-size:42px;
 cursor:pointer;
+font-weight:bold;
 }
 
-.lang-buttons{
-margin-top:25px;
+.info-title{
+font-size:42px;
+font-weight:bold;
+margin-bottom:25px;
 }
 
-.lang-btn{
-max-width:220px;
+.info-text{
+font-size:24px;
+line-height:1.7;
+margin:18px 0;
 }
 
-@media(max-width:768px){
-
-h1{font-size:42px;}
-.subtitle{font-size:20px;}
-.btn{font-size:24px;padding:18px;}
-.poem-box{font-size:19px;padding:25px;}
-.info-title{font-size:28px;}
-.info-text{font-size:20px;}
-.song-title{font-size:24px;}
-iframe{height:220px;}
-
+.lang{
+margin-top:40px;
+font-size:22px;
+color:#ddd;
 }
 
 </style>
@@ -168,225 +137,139 @@ iframe{height:220px;}
 
 <body>
 
+<div class="hero">
+
 <h1>Albert Shaulov</h1>
 
 <div class="subtitle">
-Официальный музыкальный сайт
+🎸 Автор песен • Пианино • Гитара •<br>
+Музыка от души
 </div>
 
 <a class="btn"
 href="https://youtube.com/@Betto235"
 target="_blank">
-
 🎵 Мой YouTube канал
-
 </a>
 
-<button class="btn" onclick="openSongs()">
-
+<a class="btn"
+onclick="openSongs()">
 🎼 Все мои песни
+</a>
 
-</button>
-
-<button class="btn" onclick="openOrder()">
-
+<a class="btn"
+onclick="openOrder()">
 🎤 Заказать песню
+</a>
 
-</button>
-
-<button class="btn" onclick="openRequest()">
-
-📩 Оставить заявку
-
-</button>
+<a class="btn"
+onclick="openAbout()">
+👤 Обо мне
+</a>
 
 <a class="btn"
 href="https://wa.me/972506862512"
 target="_blank">
-
 📞 Связаться со мной
-
 </a>
 
-<button class="btn" onclick="openAbout()">
-
-👤 Обо мне
-
-</button>
-
-<div class="lang-buttons">
-
-<button class="btn lang-btn" onclick="setLanguage('ru')">
-🇷🇺 Русский
-</button>
-
-<button class="btn lang-btn" onclick="setLanguage('he')">
-🇮🇱 עברית
-</button>
-
-<button class="btn lang-btn" onclick="setLanguage('en')">
+<div class="lang">
+🇮🇱 עברית<br><br>
 🇬🇧 English
-</button>
-
-</div>
-
-<div class="poem-box">
-
-Порою жизнь — как клавиши рояля,<br><br>
-
-Где белый свет сменяет темнота.<br><br>
-
-Судьба играет нами, словно ветром,<br><br>
-
-То вверх несёт, то резко бьёт волна.<br><br>
-
-Когда молчит весь мир вокруг меня,<br><br>
-
-Я говорю с мелодией своей.<br><br>
-
-Ведь музыка рождается из сердца,<br><br>
-
-И делает сердца людей теплей.
-
-</div>
-
-<div class="info-box">
-
-<div class="info-title">
-📞 Контакты
-</div>
-
-<div class="info-text">
-Альберт Шаулов
-</div>
-
-<div class="info-text">
-Телефон / WhatsApp: 050-686-2512
 </div>
 
 </div>
 
-<div class="footer">
-© Albert Shaulov — Все права защищены
-</div>
+<!-- ПЕСНИ -->
 
 <div id="songsModal" class="modal">
-
 <div class="modal-content">
 
-<span class="close" onclick="closeSongs()">&times;</span>
+<span class="close" onclick="closeSongs()">
+×
+</span>
 
 <div class="info-title">
 🎼 Все мои песни
 </div>
 
-<div class="song-card">
-<div class="song-title">🎵 Песня 1</div>
-<iframe src="https://www.youtube.com/embed/iG-y-FSbo40"></iframe>
+<div class="info-text">
+🎵 Песня 1
 </div>
 
-<div class="song-card">
-<div class="song-title">🎵 Песня 2</div>
-<iframe src="https://www.youtube.com/embed/bPf9NeaRRoY"></iframe>
+<div class="info-text">
+🎵 Песня 2
 </div>
 
-<div class="song-card">
-<div class="song-title">🎵 Песня 3</div>
-<iframe src="https://www.youtube.com/embed/86d9m6_biCA"></iframe>
+<div class="info-text">
+🎵 Песня 3
 </div>
 
-<div class="song-card">
-<div class="song-title">🎵 Песня 4</div>
-<iframe src="https://www.youtube.com/embed/oPcs-v0R4f4"></iframe>
+<div class="info-text">
+🎵 Песня 4
 </div>
 
-<div class="song-card">
-<div class="song-title">🎵 Песня 5</div>
-<iframe src="https://www.youtube.com/embed/w_SgysKNpzk"></iframe>
+<div class="info-text">
+🎵 Песня 5
 </div>
 
 </div>
-
 </div>
+
+<!-- ЗАКАЗ -->
 
 <div id="orderModal" class="modal">
-
 <div class="modal-content">
 
-<span class="close" onclick="closeOrder()">&times;</span>
+<span class="close" onclick="closeOrder()">
+×
+</span>
 
 <div class="info-title">
 🎤 Заказать песню
 </div>
 
-<div class="info-text">✅ Песня на заказ</div>
-<div class="info-text">✅ Слова и музыка</div>
-<div class="info-text">✅ Поздравления</div>
-<div class="info-text">✅ Кавказский стиль</div>
-<div class="info-text">✅ Шансон</div>
-<div class="info-text">✅ Песни для свадьбы</div>
-<div class="info-text">✅ Песни о любви</div>
-<div class="info-text">✅ Душевные и хитовые песни</div>
+<div class="info-text">
+✅ Песни о любви
+</div>
+
+<div class="info-text">
+✅ Кавказский и русский шансон
+</div>
+
+<div class="info-text">
+✅ Поздравления
+</div>
+
+<div class="info-text">
+✅ Свадьбы
+</div>
+
+<div class="info-text">
+✅ Бар-мицва и Бат-мицва
+</div>
+
+<div class="info-text">
+✅ Дни рождения
+</div>
 
 <a class="btn"
 href="https://wa.me/972506862512"
 target="_blank">
-
 📞 Написать в WhatsApp
-
 </a>
 
 </div>
-
 </div>
 
-<div id="requestModal" class="modal">
-
-<div class="modal-content">
-
-<span class="close" onclick="closeRequest()">&times;</span>
-
-<div class="info-title">
-📩 Оставить заявку
-</div>
-
-<div class="info-text">
-Напишите:
-</div>
-
-<div class="info-text">
-— Какую песню вы хотите
-</div>
-
-<div class="info-text">
-— Для кого песня
-</div>
-
-<div class="info-text">
-— Какой стиль нужен
-</div>
-
-<div class="info-text">
-— Какие эмоции и пожелания
-</div>
-
-<a class="btn"
-href="https://wa.me/972506862512"
-target="_blank">
-
-📞 Отправить заявку
-
-</a>
-
-</div>
-
-</div>
+<!-- ОБО МНЕ -->
 
 <div id="aboutModal" class="modal">
-
 <div class="modal-content">
 
-<span class="close" onclick="closeAbout()">&times;</span>
+<span class="close" onclick="closeAbout()">
+×
+</span>
 
 <div class="info-title">
 👤 Обо мне
@@ -397,23 +280,28 @@ target="_blank">
 </div>
 
 <div class="info-text">
-Я с 13 лет пишу песни, музыку и слова.
+Я пишу песни, музыку и тексты.
 </div>
 
 <div class="info-text">
-Сам пою, играю на пианино и на гитаре.
+Работаю в стиле кавказского и русского шансона.
 </div>
 
 <div class="info-text">
-Продал несколько своих песен.
+Создаю душевные, лирические песни о любви и жизни.
 </div>
 
 <div class="info-text">
-Музыкой занимаюсь от души и на высоком уровне.
+Пишу песни для свадеб, поздравлений,
+дней рождения, бар-мицвы,
+бат-мицвы и важных событий.
+</div>
+
+<div class="info-text">
+Музыка для меня — это душа.
 </div>
 
 </div>
-
 </div>
 
 <script>
@@ -434,36 +322,12 @@ function closeOrder(){
 document.getElementById("orderModal").style.display="none";
 }
 
-function openRequest(){
-document.getElementById("requestModal").style.display="block";
-}
-
-function closeRequest(){
-document.getElementById("requestModal").style.display="none";
-}
-
 function openAbout(){
 document.getElementById("aboutModal").style.display="block";
 }
 
 function closeAbout(){
 document.getElementById("aboutModal").style.display="none";
-}
-
-function setLanguage(lang){
-
-if(lang==='ru'){
-alert('Русский язык включен');
-}
-
-if(lang==='he'){
-alert('השפה העברית הופעלה');
-}
-
-if(lang==='en'){
-alert('English language enabled');
-}
-
 }
 
 </script>
