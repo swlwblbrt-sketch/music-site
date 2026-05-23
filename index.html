@@ -1,212 +1,333 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Albert Shaulov</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+<title>Albert Shaulov</title>
 
-    body{
-      background:
-        linear-gradient(rgba(255,245,225,0.82), rgba(255,245,225,0.82)),
-        url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1600&q=80');
+<style>
 
-      background-size:cover;
-      background-position:center;
-      background-attachment:fixed;
-      color:#111;
-      text-align:center;
-      padding:30px 15px;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-    h1{
-      font-size:58px;
-      color:#111;
-      margin-top:40px;
-      font-weight:bold;
-      text-shadow:1px 1px 4px rgba(255,255,255,0.6);
-    }
+body{
 
-    .subtitle{
-      font-size:24px;
-      margin-top:15px;
-      margin-bottom:40px;
-    }
+background:
+linear-gradient(rgba(255,245,225,0.82),rgba(255,245,225,0.82)),
+url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1600&q=80');
 
-    .btn{
-      display:block;
-      width:85%;
-      max-width:420px;
-      margin:20px auto;
-      padding:22px;
-      border-radius:50px;
-      background:#ffd500;
-      color:#111;
-      text-decoration:none;
-      font-size:30px;
-      font-weight:bold;
-      box-shadow:0 6px 20px rgba(0,0,0,0.25);
-      transition:0.3s;
-    }
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 
-    .btn:hover{
-      transform:scale(1.05);
-    }
+text-align:center;
+color:#111;
 
-    .section-title{
-      margin-top:80px;
-      margin-bottom:30px;
-      font-size:42px;
-      font-weight:bold;
-      color:#111;
-      text-shadow:1px 1px 3px rgba(255,255,255,0.6);
-    }
+padding:30px 15px;
+}
 
-    .song-card{
-      background:rgba(255,255,255,0.85);
-      backdrop-filter:blur(5px);
-      border-radius:30px;
-      padding:25px;
-      margin:30px auto;
-      width:95%;
-      max-width:700px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.2);
-    }
+h1{
 
-    .song-title{
-      font-size:34px;
-      margin-bottom:20px;
-      font-weight:bold;
-    }
+font-size:58px;
+margin-top:40px;
+font-weight:bold;
+color:#111;
+text-shadow:1px 1px 4px rgba(255,255,255,0.5);
 
-    iframe{
-      width:100%;
-      height:350px;
-      border:none;
-      border-radius:20px;
-    }
+}
 
-    .footer{
-      margin-top:80px;
-      font-size:20px;
-      color:#222;
-      padding-bottom:40px;
-    }
+.subtitle{
 
-    @media(max-width:768px){
+font-size:24px;
+margin-top:15px;
+margin-bottom:40px;
 
-      h1{
-        font-size:42px;
-      }
+}
 
-      .subtitle{
-        font-size:20px;
-      }
+.btn{
 
-      .btn{
-        font-size:24px;
-        padding:18px;
-      }
+display:block;
+width:85%;
+max-width:420px;
 
-      .section-title{
-        font-size:32px;
-      }
+margin:20px auto;
 
-      .song-title{
-        font-size:28px;
-      }
+padding:22px;
 
-      iframe{
-        height:220px;
-      }
+border-radius:50px;
 
-    }
+background:#ffd500;
 
-  </style>
+color:#111;
+
+text-decoration:none;
+
+font-size:30px;
+
+font-weight:bold;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+transition:0.3s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.05);
+
+}
+
+.section-title{
+
+margin-top:80px;
+margin-bottom:30px;
+
+font-size:42px;
+font-weight:bold;
+
+color:#111;
+
+}
+
+.song-card{
+
+background:rgba(255,255,255,0.86);
+
+border-radius:30px;
+
+padding:25px;
+
+margin:30px auto;
+
+width:95%;
+max-width:700px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+backdrop-filter:blur(5px);
+
+}
+
+.song-title{
+
+font-size:34px;
+font-weight:bold;
+margin-bottom:20px;
+
+}
+
+iframe{
+
+width:100%;
+height:350px;
+
+border:none;
+
+border-radius:20px;
+
+}
+
+.contact-box{
+
+background:rgba(255,255,255,0.85);
+
+padding:30px;
+
+border-radius:30px;
+
+margin:60px auto;
+
+width:95%;
+max-width:700px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+}
+
+.contact-title{
+
+font-size:38px;
+font-weight:bold;
+
+margin-bottom:25px;
+
+}
+
+.contact-text{
+
+font-size:26px;
+
+margin:15px 0;
+
+}
+
+.footer{
+
+margin-top:80px;
+
+font-size:20px;
+
+padding-bottom:40px;
+
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:42px;
+}
+
+.subtitle{
+font-size:20px;
+}
+
+.btn{
+font-size:24px;
+padding:18px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+.song-title{
+font-size:28px;
+}
+
+iframe{
+height:220px;
+}
+
+.contact-title{
+font-size:30px;
+}
+
+.contact-text{
+font-size:20px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <h1>Albert Shaulov</h1>
+<h1>Albert Shaulov</h1>
 
-  <div class="subtitle">
-    Официальный музыкальный сайт
-  </div>
+<div class="subtitle">
+Официальный музыкальный сайт
+</div>
 
-  <a class="btn"
-     href="https://youtube.com/@Betto235"
-     target="_blank">
-     🎵 Мои песни на YouTube
-  </a>
+<a class="btn"
+href="https://youtube.com/@Betto235"
+target="_blank">
 
-  <a class="btn"
-     href="https://t.me/"
-     target="_blank">
-     📞 Связаться со мной
-  </a>
+🎵 Мои песни на YouTube
 
-  <div class="section-title">
-    🎼 Все мои песни
-  </div>
+</a>
 
-  <div class="song-card">
+<a class="btn"
+href="https://wa.me/972506862512"
+target="_blank">
 
-    <div class="song-title">
-      Песня 1
-    </div>
+📞 Связаться со мной
 
-    <iframe
-      src="https://www.youtube.com/embed/jQcYWHrkbjk">
-    </iframe>
+</a>
 
-  </div>
+<div class="section-title">
 
-  <div class="song-card">
+🎼 Все мои песни
 
-    <div class="song-title">
-      Песня 2
-    </div>
+</div>
 
-    <iframe
-      src="https://www.youtube.com/embed/i4W7i7IOMMA">
-    </iframe>
+<div class="song-card">
 
-  </div>
+<div class="song-title">
 
-  <div class="song-card">
+Песня 1
 
-    <div class="song-title">
-      Песня 3
-    </div>
+</div>
 
-    <iframe
-      src="https://www.youtube.com/embed/R4-M8EFx7t4">
-    </iframe>
+<iframe
+src="https://www.youtube.com/embed/jQcYWHrkbjk">
+</iframe>
 
-  </div>
+</div>
 
-  <div class="song-card">
+<div class="song-card">
 
-    <div class="song-title">
-      Песня 4
-    </div>
+<div class="song-title">
 
-    <iframe
-      src="https://www.youtube.com/embed/sxMxtXUxMwc">
-    </iframe>
+Песня 2
 
-  </div>
+</div>
 
-  <div class="footer">
-    © Albert Shaulov — Все права защищены
-  </div>
+<iframe
+src="https://www.youtube.com/embed/i4W7i7IOMMA">
+</iframe>
+
+</div>
+
+<div class="song-card">
+
+<div class="song-title">
+
+Песня 3
+
+</div>
+
+<iframe
+src="https://www.youtube.com/embed/R4-M8EFx7t4">
+</iframe>
+
+</div>
+
+<div class="song-card">
+
+<div class="song-title">
+
+Песня 4
+
+</div>
+
+<iframe
+src="https://www.youtube.com/embed/sxMxtXUxMwc">
+</iframe>
+
+</div>
+
+<div class="contact-box">
+
+<div class="contact-title">
+📞 Контакты
+</div>
+
+<div class="contact-text">
+Имя: Альберт Шаулов
+</div>
+
+<div class="contact-text">
+Телефон: 050-686-2512
+</div>
+
+<div class="contact-text">
+WhatsApp: 050-686-2512
+</div>
+
+</div>
+
+<div class="footer">
+
+© Albert Shaulov — Все права защищены
+
+</div>
 
 </body>
 </html>
