@@ -25,7 +25,6 @@ background-attachment:fixed;
 
 text-align:center;
 color:#111;
-
 padding:30px 15px;
 }
 
@@ -143,6 +142,14 @@ float:right;
 cursor:pointer;
 }
 
+.lang-buttons{
+margin-top:25px;
+}
+
+.lang-btn{
+max-width:220px;
+}
+
 @media(max-width:768px){
 
 h1{font-size:42px;}
@@ -187,6 +194,12 @@ target="_blank">
 
 </button>
 
+<button class="btn" onclick="openRequest()">
+
+📩 Оставить заявку
+
+</button>
+
 <a class="btn"
 href="https://wa.me/972506862512"
 target="_blank">
@@ -200,6 +213,22 @@ target="_blank">
 👤 Обо мне
 
 </button>
+
+<div class="lang-buttons">
+
+<button class="btn lang-btn" onclick="setLanguage('ru')">
+🇷🇺 Русский
+</button>
+
+<button class="btn lang-btn" onclick="setLanguage('he')">
+🇮🇱 עברית
+</button>
+
+<button class="btn lang-btn" onclick="setLanguage('en')">
+🇬🇧 English
+</button>
+
+</div>
 
 <div class="poem-box">
 
@@ -217,15 +246,7 @@ target="_blank">
 
 Ведь музыка рождается из сердца,<br><br>
 
-И делает сердца людей теплей.<br><br>
-
-Не деньги делают богатым человека,<br><br>
-
-Не золото и блеск красивых фраз.<br><br>
-
-А тот огонь, что музыка зажгла однажды,<br><br>
-
-Навеки остаётся внутри нас.
+И делает сердца людей теплей.
 
 </div>
 
@@ -259,15 +280,30 @@ target="_blank">
 🎼 Все мои песни
 </div>
 
-<div class="song-card"><div class="song-title">🎵 Песня 1</div><iframe src="https://www.youtube.com/embed/iG-y-FSbo40"></iframe></div>
+<div class="song-card">
+<div class="song-title">🎵 Песня 1</div>
+<iframe src="https://www.youtube.com/embed/iG-y-FSbo40"></iframe>
+</div>
 
-<div class="song-card"><div class="song-title">🎵 Песня 2</div><iframe src="https://www.youtube.com/embed/bPf9NeaRRoY"></iframe></div>
+<div class="song-card">
+<div class="song-title">🎵 Песня 2</div>
+<iframe src="https://www.youtube.com/embed/bPf9NeaRRoY"></iframe>
+</div>
 
-<div class="song-card"><div class="song-title">🎵 Песня 3</div><iframe src="https://www.youtube.com/embed/86d9m6_biCA"></iframe></div>
+<div class="song-card">
+<div class="song-title">🎵 Песня 3</div>
+<iframe src="https://www.youtube.com/embed/86d9m6_biCA"></iframe>
+</div>
 
-<div class="song-card"><div class="song-title">🎵 Песня 4</div><iframe src="https://www.youtube.com/embed/oPcs-v0R4f4"></iframe></div>
+<div class="song-card">
+<div class="song-title">🎵 Песня 4</div>
+<iframe src="https://www.youtube.com/embed/oPcs-v0R4f4"></iframe>
+</div>
 
-<div class="song-card"><div class="song-title">🎵 Песня 5</div><iframe src="https://www.youtube.com/embed/w_SgysKNpzk"></iframe></div>
+<div class="song-card">
+<div class="song-title">🎵 Песня 5</div>
+<iframe src="https://www.youtube.com/embed/w_SgysKNpzk"></iframe>
+</div>
 
 </div>
 
@@ -283,43 +319,62 @@ target="_blank">
 🎤 Заказать песню
 </div>
 
-<div class="info-text">
-✅ Песня на заказ
-</div>
-
-<div class="info-text">
-✅ Слова и музыка
-</div>
-
-<div class="info-text">
-✅ Поздравления
-</div>
-
-<div class="info-text">
-✅ Кавказский стиль
-</div>
-
-<div class="info-text">
-✅ Шансон
-</div>
-
-<div class="info-text">
-✅ Песни для свадьбы
-</div>
-
-<div class="info-text">
-✅ Песни о любви
-</div>
-
-<div class="info-text">
-✅ Душевные и хитовые песни
-</div>
+<div class="info-text">✅ Песня на заказ</div>
+<div class="info-text">✅ Слова и музыка</div>
+<div class="info-text">✅ Поздравления</div>
+<div class="info-text">✅ Кавказский стиль</div>
+<div class="info-text">✅ Шансон</div>
+<div class="info-text">✅ Песни для свадьбы</div>
+<div class="info-text">✅ Песни о любви</div>
+<div class="info-text">✅ Душевные и хитовые песни</div>
 
 <a class="btn"
 href="https://wa.me/972506862512"
 target="_blank">
 
 📞 Написать в WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+<div id="requestModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeRequest()">&times;</span>
+
+<div class="info-title">
+📩 Оставить заявку
+</div>
+
+<div class="info-text">
+Напишите:
+</div>
+
+<div class="info-text">
+— Какую песню вы хотите
+</div>
+
+<div class="info-text">
+— Для кого песня
+</div>
+
+<div class="info-text">
+— Какой стиль нужен
+</div>
+
+<div class="info-text">
+— Какие эмоции и пожелания
+</div>
+
+<a class="btn"
+href="https://wa.me/972506862512"
+target="_blank">
+
+📞 Отправить заявку
 
 </a>
 
@@ -354,7 +409,7 @@ target="_blank">
 </div>
 
 <div class="info-text">
-Музыкой занимаюсь от души, серьёзно и на высоком уровне.
+Музыкой занимаюсь от души и на высоком уровне.
 </div>
 
 </div>
@@ -371,6 +426,22 @@ function closeSongs(){
 document.getElementById("songsModal").style.display="none";
 }
 
+function openOrder(){
+document.getElementById("orderModal").style.display="block";
+}
+
+function closeOrder(){
+document.getElementById("orderModal").style.display="none";
+}
+
+function openRequest(){
+document.getElementById("requestModal").style.display="block";
+}
+
+function closeRequest(){
+document.getElementById("requestModal").style.display="none";
+}
+
 function openAbout(){
 document.getElementById("aboutModal").style.display="block";
 }
@@ -379,12 +450,20 @@ function closeAbout(){
 document.getElementById("aboutModal").style.display="none";
 }
 
-function openOrder(){
-document.getElementById("orderModal").style.display="block";
+function setLanguage(lang){
+
+if(lang==='ru'){
+alert('Русский язык включен');
 }
 
-function closeOrder(){
-document.getElementById("orderModal").style.display="none";
+if(lang==='he'){
+alert('השפה העברית הופעלה');
+}
+
+if(lang==='en'){
+alert('English language enabled');
+}
+
 }
 
 </script>
