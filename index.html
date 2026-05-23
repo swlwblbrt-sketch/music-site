@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Albert Shaulov</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -18,11 +18,14 @@ body{
 background:
 linear-gradient(rgba(255,245,225,0.82),rgba(255,245,225,0.82)),
 url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1600&q=80');
+
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
+
 text-align:center;
 color:#111;
+
 padding:30px 15px;
 }
 
@@ -30,14 +33,11 @@ h1{
 font-size:58px;
 margin-top:40px;
 font-weight:bold;
-color:#111;
-text-shadow:1px 1px 4px rgba(255,255,255,0.5);
 }
 
 .subtitle{
 font-size:24px;
-margin-top:15px;
-margin-bottom:40px;
+margin:15px 0 40px;
 }
 
 .btn{
@@ -53,11 +53,8 @@ text-decoration:none;
 font-size:30px;
 font-weight:bold;
 box-shadow:0 8px 20px rgba(0,0,0,0.25);
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
+border:none;
+cursor:pointer;
 }
 
 .section-title{
@@ -65,7 +62,6 @@ margin-top:80px;
 margin-bottom:30px;
 font-size:42px;
 font-weight:bold;
-color:#111;
 }
 
 .song-card,.info-box{
@@ -76,7 +72,6 @@ margin:30px auto;
 width:95%;
 max-width:700px;
 box-shadow:0 10px 30px rgba(0,0,0,0.2);
-backdrop-filter:blur(5px);
 }
 
 .song-title,.info-title{
@@ -104,15 +99,68 @@ font-size:20px;
 padding-bottom:40px;
 }
 
-@media(max-width:768px){
-h1{font-size:42px;}
-.subtitle{font-size:20px;}
-.btn{font-size:24px;padding:18px;}
-.section-title{font-size:32px;}
-.song-title,.info-title{font-size:28px;}
-.info-text{font-size:20px;}
-iframe{height:220px;}
+.modal{
+display:none;
+position:fixed;
+z-index:999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+padding:40px 15px;
+overflow:auto;
 }
+
+.modal-content{
+background:white;
+border-radius:30px;
+padding:30px;
+max-width:700px;
+margin:60px auto;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.close{
+font-size:40px;
+font-weight:bold;
+float:right;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:42px;
+}
+
+.subtitle{
+font-size:20px;
+}
+
+.btn{
+font-size:24px;
+padding:18px;
+}
+
+.section-title{
+font-size:32px;
+}
+
+.song-title,.info-title{
+font-size:28px;
+}
+
+.info-text{
+font-size:20px;
+}
+
+iframe{
+height:220px;
+}
+
+}
+
 </style>
 </head>
 
@@ -124,44 +172,125 @@ iframe{height:220px;}
 Официальный музыкальный сайт
 </div>
 
-<a class="btn" href="https://youtube.com/@Betto235" target="_blank">
+<a class="btn"
+href="https://youtube.com/@Betto235"
+target="_blank">
+
 🎵 Мои песни на YouTube
+
 </a>
 
-<a class="btn" href="https://wa.me/972506862512" target="_blank">
+<a class="btn"
+href="https://wa.me/972506862512"
+target="_blank">
+
 📞 Связаться со мной
+
 </a>
 
-<a class="btn" href="#about">
+<button class="btn" onclick="openAbout()">
+
 👤 Обо мне
-</a>
+
+</button>
 
 <div class="section-title">
+
 🎼 Все мои песни
+
 </div>
 
 <div class="song-card">
-<div class="song-title">Песня 1</div>
-<iframe src="https://www.youtube.com/embed/jQcYWHrkbjk"></iframe>
+
+<div class="song-title">
+
+Песня 1
+
+</div>
+
+<iframe
+src="https://www.youtube.com/embed/jQcYWHrkbjk">
+</iframe>
+
 </div>
 
 <div class="song-card">
-<div class="song-title">Песня 2</div>
-<iframe src="https://www.youtube.com/embed/i4W7i7IOMMA"></iframe>
+
+<div class="song-title">
+
+Песня 2
+
+</div>
+
+<iframe
+src="https://www.youtube.com/embed/i4W7i7IOMMA">
+</iframe>
+
 </div>
 
 <div class="song-card">
-<div class="song-title">Песня 3</div>
-<iframe src="https://www.youtube.com/embed/R4-M8EFx7t4"></iframe>
+
+<div class="song-title">
+
+Песня 3
+
+</div>
+
+<iframe
+src="https://www.youtube.com/embed/R4-M8EFx7t4">
+</iframe>
+
 </div>
 
 <div class="song-card">
-<div class="song-title">Песня 4</div>
-<iframe src="https://www.youtube.com/embed/sxMxtXUxMwc"></iframe>
+
+<div class="song-title">
+
+Песня 4
+
 </div>
 
-<div class="info-box" id="about">
-<div class="info-title">👤 Обо мне</div>
+<iframe
+src="https://www.youtube.com/embed/sxMxtXUxMwc">
+</iframe>
+
+</div>
+
+<div class="info-box">
+
+<div class="info-title">
+
+📞 Контакты
+
+</div>
+
+<div class="info-text">
+Альберт Шаулов
+</div>
+
+<div class="info-text">
+Телефон / WhatsApp: 050-686-2512
+</div>
+
+</div>
+
+<div class="footer">
+
+© Albert Shaulov — Все права защищены
+
+</div>
+
+<div id="aboutModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="closeAbout()">&times;</span>
+
+<div class="info-title">
+
+👤 Обо мне
+
+</div>
 
 <div class="info-text">
 Меня зовут Альберт Шаулов.
@@ -186,23 +315,22 @@ iframe{height:220px;}
 <div class="info-text">
 Для меня музыка — это жизнь, чувства, душа и вдохновение.
 </div>
+
 </div>
 
-<div class="info-box">
-<div class="info-title">📞 Контакты</div>
-
-<div class="info-text">
-Альберт Шаулов
 </div>
 
-<div class="info-text">
-Телефон / WhatsApp: 050-686-2512
-</div>
-</div>
+<script>
 
-<div class="footer">
-© Albert Shaulov — Все права защищены
-</div>
+function openAbout(){
+document.getElementById("aboutModal").style.display="block";
+}
+
+function closeAbout(){
+document.getElementById("aboutModal").style.display="none";
+}
+
+</script>
 
 </body>
 </html>
